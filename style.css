@@ -1,0 +1,109 @@
+*{
+  margin: 0; /*espaço pra fora*/
+  padding: 0; /*preenchimento*+espaço pra dentro*/
+  box-sizing: border-box; /*mantem a largura da caixa*/
+}
+
+body{
+  background: #09090a;
+  height: 100vh;
+}
+header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /*margin: 48px; É PADDING*/
+  padding: 48px;
+  position: fixed;
+  background-color: #09090a;
+  width: 100%;
+  
+}
+
+button{
+  border-radius: 8px;
+  padding: 16px 24px;
+  border: 1px solid #8b5cf6; /*1px é a grossura |solida é continua */
+  background-color: transparent; /*deixa transparente*/
+  color: white;
+
+  display: flex;
+  align-items: center;
+  font-family: 'Inter';
+  font-weight: 600; /*grossura*/
+  font-size: 16px;
+  gap: 12px; /*quando é display flex pode usar pra dar espaço entre os elementos*/
+
+}
+
+button:active{
+  border: 3px solid #7042dd;
+}
+#habits-form{
+    display: flex;
+    padding: 182px 48px 48px;
+    width: fit-content;
+}
+.habits{
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-top:57px; 
+}
+.habit{
+  width: 64px;
+  height: 64px;
+  font-size: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.days{
+    display: flex;
+    gap: 48px;
+    margin-left: 32px;
+
+    
+}
+.day{
+  display: flex;
+  flex-direction: column; /* deixa flex em coluna*/
+  gap: 24px;
+
+
+}
+.day div{
+  color: #a1a1aa;
+  margin-bottom: 8px;
+  font-family: 'Roboto Mono';
+  text-align: center;
+  line-height: 125%;
+}
+
+input{
+
+  /* para usar umas propriedades extra preciso tirar a aparencia dele*/
+
+    appearance: none;
+    -webkit-appearance: none;
+    width: 64px;
+    height: 64px;
+    border-radius:8px ;
+    border: 2px solid #27272a;
+    background: #18181b;
+}
+
+
+/*quando o input estiver como checked(marcado)*/
+input:checked{
+  background: #8B5CF6;
+  border: 2px solid #A78BFA;
+  
+}
+@media (max-width:570px){
+  button div{ 
+    display: none;
+  }
+}
+
